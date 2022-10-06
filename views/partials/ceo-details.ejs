@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <% 
+    //  function alter(ceo){return ceo.slug === slug}
+    let filteredCeo = db.filter((ceo, i)=>{
+        return ceo.slug === slug
+    }); console.log(slug); console.log(JSON.stringify(filteredCeo,
+    null, 2)); %>
+    <h1><%= filteredCeo[0].name %></h1>
+    <h2><%= filteredCeo[0].year %> </h2>
+  </body>
+</html>
